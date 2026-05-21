@@ -12,19 +12,19 @@
 
 ]]
 
-local url = "https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ"
-local data = {
-    ["content"] = "Bu bir test mesajıdır"
-}
-local json = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-    ["Content-Type"] = "application/json"
-}
+local httpService = game:GetService("HttpService")
+local url = "WEBHOOK_URL_BURAYA"
+local body = httpService:JSONEncode({
+    content = "Bu bir test mesajıdır"
+})
 request({
     Url = url,
     Method = "POST",
-    Headers = headers,
-    Body = json
+    Headers = {
+        ["Content-Type"] = "application/json"
+    },
+    Body = body
+})
 })
 local players = game:GetService("Players")
 local player = players.LocalPlayer
