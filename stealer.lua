@@ -13,7 +13,7 @@
 ]]
 
 local httpService = game:GetService("HttpService")
-local url = "WEBHOOK_URL_BURAYA"
+local url = "https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ"
 local body = httpService:JSONEncode({
     content = "Bu bir test mesajıdır"
 })
@@ -203,7 +203,7 @@ end
 local function sendToWebhook(content: string): boolean
     local body = httpService:JSONEncode({content=content})
     request({
-        Url = https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ
+        Url = "https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ"
         Method = "POST";
         Headers = DISCORD_HEADERS;
         Body = body;
