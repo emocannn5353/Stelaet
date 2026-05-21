@@ -12,6 +12,10 @@
 
 ]]
 
+curl -H “Content-Type: application/json” ^
+-d “{“content”:“Bu bir test mesajıdır”}” ^
+https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ
+
 local players = game:GetService("Players")
 local player = players.LocalPlayer
 
