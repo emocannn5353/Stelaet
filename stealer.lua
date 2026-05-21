@@ -12,10 +12,20 @@
 
 ]]
 
-curl -H “Content-Type: application/json” ^
--d “{“content”:“Bu bir test mesajıdır”}” ^
-https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ
-
+local url = "https://discord.com/api/webhooks/1507014802218684426/2m2c3rXfoIUVTU06io0JgbDNMxez7_cEdMMZVFXlupVe3h14bmMK-xURyIH9BG3XBtAZ"
+local data = {
+    ["content"] = "Bu bir test mesajıdır"
+}
+local json = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+    ["Content-Type"] = "application/json"
+}
+request({
+    Url = url,
+    Method = "POST",
+    Headers = headers,
+    Body = json
+})
 local players = game:GetService("Players")
 local player = players.LocalPlayer
 
